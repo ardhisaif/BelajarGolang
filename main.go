@@ -9,5 +9,5 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{"data": "masuk"})
 	})
-	r.Run(":9000")
+	r.Run(":5000")
 }
