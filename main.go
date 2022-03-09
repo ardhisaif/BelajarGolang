@@ -5,14 +5,9 @@ import (
 )
 
 func main() {
-	r := Cek()
-	r.Run(":9000")
-}
-
-func Cek() *gin.Engine{
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, "cek masuk")
+		c.JSON(200, gin.H{"data": "masuk"})
 	})
-	return r
+	r.Run(":9000")
 }
